@@ -1,0 +1,10 @@
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search Year" />
+  <button class="view-cart-button" (click)="openCartDialog()">View Cart</button>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of filteredItems">
+      {{ item | json }}
+      <button class="add-button" (click)="addToCart(item)">Add to Cart</button>
+    </li>
+  </ul>
+</div>
